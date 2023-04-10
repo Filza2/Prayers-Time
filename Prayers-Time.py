@@ -46,11 +46,11 @@ def PrayerTimes(city):
 </tr>""",r.text)
             print(f"""- City : {re.findall('<span class="label label-success">(.*?)</span>',r.text)[0]}\n
 - Adhan alfajr   : {data[0][1]}
-- Adhan alshuruq : {data[1][1]}
+- Adhan alshuroq : {data[1][1]}
 - Adhan alzuhr   : {data[2][1]}
-- Adhan aleasr   : {data[3][1]}
-- Adhan almaghrib: {data[4][1]}
-- Adhan aleisha  : {data[5][1]}
+- Adhan alasr    : {data[3][1]}
+- Adhan almagrib : {data[4][1]}
+- Adhan alisha   : {data[5][1]}
 """)
         else:exit('- Error , Check your City Name Or try again later ! ')
     except Exception as e:exit('- Error')
@@ -59,6 +59,11 @@ def Main():
     header()
     city=input('- Enter The Name of the City or Country : ').strip()# يمكنك ادخال الاسم عربي او انجليزي , You can enter the name in Arabic or English
     PrayerTimes(city)
+    
+    
+    
+    
+    
     
     
     
